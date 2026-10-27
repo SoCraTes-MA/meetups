@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueillir un meetup · Moroccan Software Crafters</title>
+  <meta name="description" content="Votre entreprise souhaite accueillir un meetup Moroccan Software Crafters ? Choisissez une formule, proposez une date et nous revenons vers vous sous 48 heures.">
+  <meta property="og:title" content="Accueillir un meetup Moroccan Software Crafters">
+  <meta property="og:description" content="Gratuit ou en formule partenaire : recevez la communauté Software Craftsmanship dans vos locaux.">
+  <meta property="og:image" content="https://socrates-ma.github.io/meetups/assets/img/meetups/2026-05-axa-1.jpg">
+  <meta property="og:url" content="https://socrates-ma.github.io/meetups/accueillir.html">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#funnel">Aller au formulaire</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img src="assets/img/logo.png" alt="" width="44" height="44">
+        <span><strong>Moroccan Software Crafters</strong><small>Association à but non lucratif</small></span>
+      </a>
+      <nav class="nav-simple" aria-label="Navigation principale">
+        <a href="./#historique">Éditions passées</a>
+        <a href="./#offres">Formules</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="host-hero">
+      <div class="wrap">
+        <p class="eyebrow">Accueillir un meetup</p>
+        <h1>Recevez 50 crafters un samedi matin.</h1>
+        <p class="lead">Dites-nous quand, combien et dans quelles conditions. Nous revenons vers vous sous 48 heures pour caler les détails.</p>
+      </div>
+    </section>
+
+    <div class="wrap host-layout">
+      <aside class="host-aside">
+        <ol class="steps">
+          <li><b>1</b><div><strong>Vous remplissez ce formulaire</strong><span>Deux minutes : formule, date, capacité, contact.</span></div></li>
+          <li><b>2</b><div><strong>On vous rappelle sous 48 h</strong><span>Un membre de l'équipe valide la date et la logistique avec vous.</span></div></li>
+          <li><b>3</b><div><strong>On annonce l'édition</strong><span>Affiche, page Luma et post LinkedIn, 3 à 4 semaines avant.</span></div></li>
+          <li><b>4</b><div><strong>Le jour J</strong><span>On accueille, on anime, on publie le récap avec photos.</span></div></li>
+        </ol>
+        <div class="proof">
+          <img src="assets/img/meetups/2026-10-sg-gscm-5.jpg" alt="Participants du meetup chez Société Générale GSCM" loading="lazy">
+          <p><strong>Dernière édition :</strong> Société Générale GSCM, 24 octobre 2026. 110 inscrits, après InnovX (119) et AXA Assurance Maroc.</p>
+        </div>
+      </aside>
+
+      <div class="funnel" id="funnel">
+        <form id="host-form" novalidate>
+          <div class="progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <p class="progress-label" id="progress-label" aria-live="polite"></p>
+
+          <!-- Étape 1 : formule -->
+          <fieldset class="step" data-step="1">
+            <legend>Quelle formule vous intéresse ?</legend>
+            <p class="hint">Vous pourrez en changer lors de notre échange.</p>
+            <div class="choice-cards" id="offer-choices"></div>
+            <div class="field" data-name="formule"><p class="error">Choisissez une formule pour continuer.</p></div>
+          </fieldset>
+
+          <!-- Étape 2 : l'événement -->
+          <fieldset class="step" data-step="2" hidden>
+            <legend>L'événement</legend>
+            <p class="hint">Les meetups communautaires ont lieu le samedi de 9 h à 13 h.</p>
+            <div class="row">
+              <div class="field">
+                <label for="date">Date souhaitée</label>
+                <input type="date" id="date" name="date" required>
+                <p class="help" id="date-help"></p>
+                <p class="error">Indiquez une date à venir.</p>
+              </div>
+              <div class="field">
+                <label for="date_alt">Date alternative <span class="opt">(facultatif)</span></label>
+                <input type="date" id="date_alt" name="date_alt">
+              </div>
+            </div>
+            <div class="field">
+              <span class="label" id="attendees-label">Nombre de crafters attendus</span>
+              <div class="pills" role="radiogroup" aria-labelledby="attendees-label">
+                <label class="pill"><input type="radio" name="participants" value="20-40" required><span>20 à 40</span></label>
+                <label class="pill"><input type="radio" name="participants" value="40-60"><span>40 à 60</span></label>
+                <label class="pill"><input type="radio" name="participants" value="60-80"><span>60 à 80</span></label>
+                <label class="pill"><input type="radio" name="participants" value="80+"><span>Plus de 80</span></label>
+              </div>
+              <p class="error">Indiquez une fourchette.</p>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="ville">Ville</label>
+                <select id="ville" name="ville" required>
+                  <option value="Casablanca">Casablanca</option>
+                  <option value="Rabat">Rabat</option>
+                  <option value="Marrakech">Marrakech</option>
+                  <option value="Tanger">Tanger</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="capacite">Capacité de la salle <span class="opt">(places)</span></label>
+                <input type="number" id="capacite" name="capacite" min="10" max="1000" inputmode="numeric" placeholder="ex. 60">
+                <p class="error">Entre 10 et 1000 places.</p>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label" id="equip-label">Sur place <span class="opt">(cochez ce qui est disponible)</span></span>
+              <div class="pills" role="group" aria-labelledby="equip-label">
+                <label class="pill"><input type="checkbox" name="equipements" value="Salle plénière"><span>Salle plénière</span></label>
+                <label class="pill"><input type="checkbox" name="equipements" value="Salles pour les cercles"><span>Salles pour les cercles</span></label>
+                <label class="pill"><input type="checkbox" name="equipements" value="Écran ou projecteur"><span>Écran ou projecteur</span></label>
+                <label class="pill"><input type="checkbox" name="equipements" value="Wifi invités"><span>Wifi invités</span></label>
+                <label class="pill"><input type="checkbox" name="equipements" value="Café et petit-déjeuner"><span>Café et petit-déjeuner</span></label>
+                <label class="pill"><input type="checkbox" name="equipements" value="Parking"><span>Parking</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="sujets">Sujets que vos équipes aimeraient aborder <span class="opt">(facultatif)</span></label>
+              <textarea id="sujets" name="sujets" placeholder="ex. IA et qualité du code, migration d'un legacy, pratiques de test…"></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Étape 3 : entreprise -->
+          <fieldset class="step" data-step="3" hidden>
+            <legend>Votre entreprise</legend>
+            <p class="hint">Pour préparer l'annonce et l'accès au bâtiment.</p>
+            <div class="field">
+              <label for="entreprise">Nom de l'entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" autocomplete="organization" required>
+              <p class="error">Indiquez le nom de l'entreprise.</p>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="secteur">Secteur</label>
+                <select id="secteur" name="secteur">
+                  <option value="">Choisir…</option>
+                  <option>Banque et assurance</option>
+                  <option>ESN et conseil</option>
+                  <option>Éditeur et startup</option>
+                  <option>Télécoms</option>
+                  <option>Industrie et distribution</option>
+                  <option>Secteur public</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="taille">Taille de l'équipe tech</label>
+                <select id="taille" name="taille">
+                  <option value="">Choisir…</option>
+                  <option>Moins de 20</option>
+                  <option>20 à 100</option>
+                  <option>100 à 500</option>
+                  <option>Plus de 500</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="site">Site web <span class="opt">(facultatif)</span></label>
+                <input type="url" id="site" name="site" placeholder="https://" autocomplete="url">
+                <p class="error">Adresse invalide (elle doit commencer par https://).</p>
+              </div>
+              <div class="field">
+                <label for="adresse">Quartier ou adresse <span class="opt">(facultatif)</span></label>
+                <input type="text" id="adresse" name="adresse" placeholder="ex. Casanearshore, Anfa…" autocomplete="street-address">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Étape 4 : contact -->
+          <fieldset class="step" data-step="4" hidden>
+            <legend>Comment vous joindre ?</legend>
+            <p class="hint">Nous utilisons ces informations uniquement pour vous recontacter au sujet de ce meetup.</p>
+            <div class="row">
+              <div class="field">
+                <label for="nom">Prénom et nom</label>
+                <input type="text" id="nom" name="nom" autocomplete="name" required>
+                <p class="error">Indiquez votre nom.</p>
+              </div>
+              <div class="field">
+                <label for="fonction">Fonction <span class="opt">(facultatif)</span></label>
+                <input type="text" id="fonction" name="fonction" placeholder="ex. CTO, Engineering Manager, RH…" autocomplete="organization-title">
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="email">E-mail professionnel</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <p class="error">Adresse e-mail invalide.</p>
+              </div>
+              <div class="field">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" autocomplete="tel" placeholder="+212 6 12 34 56 78" required>
+                <p class="error">Numéro invalide (ex. +212 6 12 34 56 78 ou 06 12 34 56 78).</p>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label" id="pref-label">Vous préférez être recontacté par</span>
+              <div class="pills" role="radiogroup" aria-labelledby="pref-label">
+                <label class="pill"><input type="radio" name="preference" value="E-mail" checked><span>E-mail</span></label>
+                <label class="pill"><input type="radio" name="preference" value="Téléphone"><span>Téléphone</span></label>
+                <label class="pill"><input type="radio" name="preference" value="WhatsApp"><span>WhatsApp</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Un mot de plus ? <span class="opt">(facultatif)</span></label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="field">
+              <label class="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <span>J'accepte que Moroccan Software Crafters conserve ces informations pour me recontacter au sujet de l'organisation d'un meetup (loi 09-08). Elles ne sont ni cédées ni utilisées à d'autres fins.</span>
+              </label>
+              <p class="error">Votre accord est nécessaire pour envoyer la demande.</p>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="website_hp">Ne pas remplir</label>
+              <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="recap" id="recap"></div>
+          </fieldset>
+
+          <div class="form-alert" id="form-alert" role="alert"></div>
+
+          <div class="funnel-nav">
+            <button type="button" class="btn btn-ghost" id="prev">Retour</button>
+            <button type="button" class="btn btn-primary" id="next">Continuer</button>
+          </div>
+        </form>
+
+        <div class="success" id="success" hidden tabindex="-1">
+          <div class="postit green">Merci ! On vous rappelle vite.</div>
+          <h2>Demande bien reçue.</h2>
+          <p id="success-text">Un membre de l'équipe vous recontacte sous 48 heures pour valider la date et la logistique.</p>
+          <p><a class="btn btn-ghost" href="./#historique">Revoir les éditions passées</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/img/logo.png" alt="" width="52" height="52"><span><strong>Moroccan Software Crafters</strong><small>Stimuler et promouvoir les valeurs du Software Craftsmanship</small></span></a>
+      <nav aria-label="Liens de pied de page">
+        <a href="./">Accueil</a>
+        <a href="https://www.linkedin.com/company/moroccansoftwarecrafters/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://socrates-ma.github.io/" target="_blank" rel="noopener">SoCraTes Maroc</a>
+      </nav>
+      <p class="legal">Moroccan Software Crafters, association à but non lucratif.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/funnel.js"></script>
+</body>
+</html>
